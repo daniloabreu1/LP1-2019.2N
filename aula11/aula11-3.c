@@ -12,6 +12,7 @@ int menu(){
     scanf("%d",&o);
     return o;
 }
+
 void preencher(int m[LIM][LIM],int lin,int col){
     int i,j;
     putchar('\n');
@@ -32,6 +33,7 @@ void imprimir(int m[LIM][LIM],int lin,int col){
         putchar('\n');
     }
 }
+//soma entre duas matrizes
 void somar(int a[LIM][LIM],int b[LIM][LIM],int c[LIM][LIM],int lin,int col){
     int i,j;
     for(i=0;i<lin;i++){
@@ -40,6 +42,7 @@ void somar(int a[LIM][LIM],int b[LIM][LIM],int c[LIM][LIM],int lin,int col){
         }
     }
 }
+//subtração entre duas matrizes
 void sub(int a[LIM][LIM],int b[LIM][LIM],int c[LIM][LIM],int lin,int col){
     int i,j;
     for(i=0;i<lin;i++){
@@ -48,6 +51,7 @@ void sub(int a[LIM][LIM],int b[LIM][LIM],int c[LIM][LIM],int lin,int col){
         }
     }
 }
+//multiplicação de uma matriz por um escalar
 void escalar(int a[LIM][LIM],int c[LIM][LIM],int e,int lin,int col){
     int i,j;
     for(i=0;i<lin;i++){
@@ -56,6 +60,7 @@ void escalar(int a[LIM][LIM],int c[LIM][LIM],int e,int lin,int col){
         }
     }
 }
+//multiplicação entre matrizes
 void mult(int a[LIM][LIM],int b[LIM][LIM],int c[LIM][LIM],int lin1,int col1,int col2){
     int i,j,k;
     for(i=0;i<lin1;i++){
@@ -67,6 +72,7 @@ void mult(int a[LIM][LIM],int b[LIM][LIM],int c[LIM][LIM],int lin1,int col1,int 
         }
     }
 }
+//validar para soma e subtração
 int validar(int l1,int c1,int l2,int c2){
     if((l1==l2)&&(c1==c2)){
         if((l1<=LIM)&&(c1<=LIM)&&(l1>0)&&(c1>0)){
@@ -75,6 +81,7 @@ int validar(int l1,int c1,int l2,int c2){
     }
     return 0;
 }
+//validar para multiplicação
 int validarMult(int l1,int c1,int l2,int c2){
     if(l2==c1){
         if((l1<=LIM)&&(c1<=LIM)&&(c2<=LIM)&&(l1>0)&&(c1>0)){
