@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1572977728 source:d:\google drive\trabalho\uepb\2019-2\lp1 tarde\códigos\aula21\exemplo\ponto.c
+	<stdio.h>
+	<stdlib.h>
+	"ponto.h"
+
+1572977740 d:\google drive\trabalho\uepb\2019-2\lp1 tarde\códigos\aula21\exemplo\ponto.h
+
+1572978678 source:d:\google drive\trabalho\uepb\2019-2\lp1 tarde\códigos\aula21\exemplo\menu.c
+	<stdio.h>
+
+1572978749 source:d:\google drive\trabalho\uepb\2019-2\lp1 tarde\códigos\aula21\exemplo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ponto.h"
+	"menu.c"
+
+1572978762 d:\google drive\trabalho\uepb\2019-2\lp1 tarde\códigos\aula21\exemplo\menu.c
+
