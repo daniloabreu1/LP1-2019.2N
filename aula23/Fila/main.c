@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Fila.h"
-
 int menu(){
     int op;
     printf("\t\tFILA DINAMICA\n");
@@ -18,13 +17,11 @@ int menu(){
 main(){
     FILA *fi = criarFila();
     int o;
-    ALUNO a;
     while((o=menu())!=5){
         switch(o){
         case 1:
             system("cls");
-            novoAluno(&a);
-            inserirElemento(fi,a);
+            inserirElemento(fi);
             mostrarFila(fi);
             break;
         case 2:

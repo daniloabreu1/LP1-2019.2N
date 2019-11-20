@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Fila.h"
+struct aluno{
+    char nome[31];
+    int mat;
+    float n1, n2;
+};
 struct elemento{
     ALUNO dado;
     ELEM *prox;
@@ -19,13 +24,22 @@ FILA* criarFila(){
     }
     return f;
 }
-void inserirElemento(FILA *fila,ALUNO a){
+void novoAluno(ELEM *e){
+    printf("Digite o nome do aluno: ");
+    setbuf(stdin,NULL);
+    gets(e->dado.nome);
+    printf("Digite as notas: ");
+    scanf("%f %f",&e->dado.n1,&e->dado.n2);
+    e->dado.mat=M++;
+}
+void inserirElemento(FILA *fila){
     if(fila==NULL){
         printf("\nFILA NAO ALOCADA\n");
     }else{
         ELEM *novoElemento = (ELEM*)malloc(sizeof(ELEM));
         if(novoElemento!=NULL){
-            novoElemento->dado=a;
+            novoAluno(novoElemento);
+
             novoElemento->prox=NULL;
             if(fila->inicio==NULL){
                 fila->inicio=novoElemento;
@@ -100,12 +114,4 @@ void liberarFila(FILA *fila){
         }
     }
 }
-void novoAluno(ALUNO *a){
-    static int m=1;
-    printf("Digite o nome do aluno: ");
-    setbuf(stdin,NULL);
-    gets(a->nome);
-    printf("Digite as notas: ");
-    scanf("%f %f",&a->n1,&a->n2);
-    a->mat=m++;
-}
+
