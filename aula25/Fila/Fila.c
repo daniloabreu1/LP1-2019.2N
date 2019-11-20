@@ -75,7 +75,7 @@ void mostrarFila(FILA *fila){
            while(aux!=NULL){
                 puts(aux->dado.nome);
                 printf("mat.: %d\n",aux->dado.mat);
-                printf("\nNotas: %.2f %.2f",aux->dado.n1,aux->dado.n1);
+                printf("Notas: %.2f %.2f",aux->dado.n1,aux->dado.n2);
                 printf("\n------------------------\n");
                 aux=aux->prox;
            }
